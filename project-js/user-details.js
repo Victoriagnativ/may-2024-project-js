@@ -23,6 +23,9 @@ async function fetchUserDetails(userId){
 
 }
 function showInfoUsers(user) {
+    const title =document.createElement('h1');
+    container.appendChild(title);
+    title.innerText ='Information about user'
     for (const userElem in user) {
         const p =  document.createElement('p');
         p.innerText = userElem + ': ';
@@ -86,7 +89,6 @@ async function fetchPostTitle(userId){
 
 function showTitle(posts){
 const div = document.createElement('div');
-    // ol.innerHTML = '';
     for (const post of posts) {
         console.log(post);
         const p =  document.createElement('div');
@@ -103,6 +105,7 @@ const div = document.createElement('div');
 
         div.style.justifyContent= 'center';
         div.style.flexWrap= 'wrap';
+        div.style.marginTop= '20px';
         p.style.width= '220px';
         p.style.height= '120px';
         p.style.border= '1px solid grey';
